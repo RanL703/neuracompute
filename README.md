@@ -1,48 +1,115 @@
-# LLM Inference Calculator - Android App
+# LLM Inference Calculator - Mobile App
 
-This is an Android version of the LLM Inference Calculator, built using Expo and React Native.
+A beautiful, native mobile app for calculating hardware requirements for running Large Language Models (LLMs) locally. Built with React Native and Expo.
 
-## Overview
+## Features
 
-This app uses a WebView to display the web version of the LLM Inference Calculator, enabling mobile access to the tool that calculates inference time for running LLMs locally based on LLM specs.
+- 🎨 Beautiful, modern UI with animated elements
+- 📱 Fully native mobile experience
+- 🧮 Real-time calculations for:
+  - VRAM requirements
+  - System memory needs
+  - Storage requirements
+  - Multi-GPU configurations
+- 🔄 Support for various quantization methods
+- 💾 KV Cache optimization options
+- 🖥️ Unified and discrete memory configurations
 
 ## Prerequisites
 
-- Node.js and npm
-- Expo CLI
-- Android development environment set up (Android Studio with emulator)
+- Node.js (v14 or newer)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
+- For iOS development:
+  - macOS
+  - Xcode
+  - iOS Simulator
+- For Android development:
+  - Android Studio
+  - Android SDK
+  - Android Emulator
 
-## Setup and Running
+## Installation
 
-1. Build the web app:
+1. Clone the repository:
    ```bash
-   cd ..
+   git clone https://github.com/yourusername/llm-inference-calculator.git
+   cd llm-inference-calculator
+   ```
+
+2. Install dependencies:
+   ```bash
    npm install
-   npm run build
    ```
 
-2. Install Expo app dependencies:
+3. Start the development server:
    ```bash
-   cd NeuraCompute
-   npm install
+   npx expo start
    ```
 
-3. Run both servers:
-   ```bash
-   cd ..
-   npm run start-all
-   ```
+4. Run on your preferred platform:
+   - Press `a` for Android
+   - Press `i` for iOS (requires macOS)
+   - Scan QR code with Expo Go app on your device
 
-4. In the Expo interface that appears in the terminal, press 'a' to open the app in an Android emulator.
+## Project Structure
+
+```
+src/
+├── context/
+│   └── AppContext.tsx    # Global state management
+├── screens/
+│   ├── WelcomeScreen.tsx # Welcome screen with animations
+│   ├── CalculatorScreen.tsx # Main calculator interface
+│   └── ResultsScreen.tsx # Results display
+├── types/
+│   └── index.ts         # TypeScript type definitions
+├── utils/
+│   └── calculations.ts  # Calculation helper functions
+└── styles/
+    └── styles.ts       # Shared styles
+```
+
+## Features in Detail
+
+### Welcome Screen
+- Animated background with floating orbs
+- Clear call-to-action
+- Modern, minimalist design
+
+### Calculator Screen
+- Model Configuration:
+  - Parameter count adjustment
+  - Quantization selection (F32 to AWQ)
+  - Context length configuration
+  - KV Cache settings
+- System Configuration:
+  - Memory mode selection (Discrete/Unified)
+  - VRAM configuration
+  - System memory settings
+
+### Results Screen
+- Hardware Requirements:
+  - VRAM utilization visualization
+  - Storage requirements
+  - GPU configuration recommendations
+  - System memory requirements
+- Status indicators for memory compatibility
 
 ## Technology Stack
 
 - React Native
 - Expo
-- WebView
-- The original Vite+React web app
+- React Navigation
+- TypeScript
+- Linear Gradient
+- Animated API
+- Vector Icons
 
-## Important Notes
+## Contributing
 
-- The app uses a WebView that connects to a local server running the Vite app.
-- For production deployment, you would need to host the web app and update the URL in the App.tsx file. 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
