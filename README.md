@@ -1,4 +1,4 @@
-# neuracompute an LLM Inference Calculator - Mobile App
+# neuracompute | an LLM Inference Calculator Mobile App
 
 A beautiful, native mobile app for calculating hardware requirements for running Large Language Models (LLMs) locally. Built with React Native and Expo.
 
